@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 19:45:32 by vsanin            #+#    #+#             */
-/*   Updated: 2025/07/11 21:29:09 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/07/12 16:55:06 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ size_t Array<T>::size(void) const
 template <typename T>
 T& Array<T>::operator[](int index)
 {
-	if (index < 0 || static_cast<size_t>(index) > len)
+	if (index < 0 || static_cast<size_t>(index) >= len)
 		throw std::exception();
 	return array[index];
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 18:57:53 by vsanin            #+#    #+#             */
-/*   Updated: 2025/07/11 21:30:08 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/07/12 16:54:27 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,17 @@ int main(int, char**)
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
-	std::cout << "size: " << numbers.size() << "\n"; ///
     for (int i = 0; i < MAX_VAL; i++)
     {
         const int value = rand();
-		std::cout << i << "\n"; /// 
         numbers[i] = value;
-		std::cout << "X\n"; /// 
         mirror[i] = value;
-		std::cout << "X\n"; /// 
     }
     //SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
-		std::cout << "X\n"; /// 
     }
-	
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
@@ -51,6 +45,7 @@ int main(int, char**)
     }
     catch(const std::exception& e)
     {
+		std::cerr << "try catch 1\n";
         std::cerr << e.what() << '\n';
     }
     try
@@ -59,13 +54,14 @@ int main(int, char**)
     }
     catch(const std::exception& e)
     {
+		std::cerr << "try catch 2\n";
         std::cerr << e.what() << '\n';
     }
-
     for (int i = 0; i < MAX_VAL; i++)
     {
         numbers[i] = rand();
     }
+	std::cout << "X\n"; /// 
     delete [] mirror;//
     return 0;
 }
