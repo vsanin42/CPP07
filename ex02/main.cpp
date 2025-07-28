@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 18:57:53 by vsanin            #+#    #+#             */
-/*   Updated: 2025/07/13 21:42:13 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/07/28 13:15:39 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ int main(int, char**)
 		std::cout << "bools: '" << bools[0] << "' '" << bools[1] << "'\n\n";
 		
 		Array<char> chars(2);
+		std::cout << "chars: '" << chars[0] << "' '" << chars[1] << "'\n";
 		chars[0] = 'a';
 		chars[1] = 'b';
 		std::cout << "chars: '" << chars[0] << "' '" << chars[1] << "'\n\n";

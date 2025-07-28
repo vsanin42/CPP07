@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 19:45:32 by vsanin            #+#    #+#             */
-/*   Updated: 2025/07/13 20:26:58 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/07/28 13:08:03 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Array<T>::Array() : array(new T[0]), len(0)
 }
 
 template <typename T>
-Array<T>::Array(unsigned int n) : array(new T[n]), len(n)
+Array<T>::Array(unsigned int n) : array(new T[n]()), len(n)
 {
 	std::cout << "Parametrized constructor\n";
 }
